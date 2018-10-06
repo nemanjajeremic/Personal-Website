@@ -56,7 +56,13 @@ main {
     padding: 0;
     /* float: right;
     vertical-align: middle; */
+
+    @media (max-width: 820px) {
+        display: none;
+    }
 }
+
+
 
 .main-nav__item {
     display: inline-block;
@@ -67,6 +73,7 @@ main {
         color: black;
         border: 1px transparent solid;
         padding: 8px;
+
         &:hover,
         &:active {
             border: 1px transparent solid;
@@ -88,9 +95,12 @@ main {
 
 .section-1__container {
     height: calc(80vh - 57.6px);
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     padding: 6rem 0;
     justify-content: center;
@@ -102,6 +112,7 @@ main {
     padding: 0 2rem;
     margin-left: auto;
     margin-right: auto;
+
     p {
         color: lightgray;
     }
@@ -118,8 +129,9 @@ main {
 
 /* SECTION 2*/
 
-.section-2__container{
-    background: white;
+.section-2__container {
+    background-color: white;
+
 }
 
 
@@ -155,6 +167,7 @@ main {
     background: white;
     padding: 2.5rem;
     border: 1px solid rgb(121, 121, 121);
+
     img {
         height: 50px;
         width: 50px;
@@ -190,13 +203,15 @@ main {
 
 .section-4 {
     background: rgb(90, 159, 182);
+
     h3 {
         text-align: center;
         margin: 0;
         padding: 1rem;
     }
-    
-    input,textarea {
+
+    input,
+    textarea {
         display: block;
         width: 100%;
     }
@@ -217,3 +232,41 @@ footer {
     background: rgb(68, 81, 192);
     text-align: center;
 }
+
+/*  MOBILE NAVIGATION  */
+     /* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 
+
+
+Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+    @media (max-width: 820px) {
+            display: block;
+    }}
+
