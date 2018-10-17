@@ -20,7 +20,9 @@ main {
 /* NAVIGATION */
 .header {
   height: 60px;
-  margin: 0 18%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,6 +183,16 @@ main {
   border: 1px solid #797979;
 }
 
+.skill-box:hover, .skill-box:active {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
 .skill-box img {
   height: 50px;
   width: 50px;
@@ -196,13 +208,13 @@ main {
 
 /* SECTION 3*/
 #section-3 {
-  background: #00F260;
+  background: #8e9eab;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#0575E6), to(#00F260));
-  background: linear-gradient(to right, #0575E6, #00F260);
+  background: -webkit-gradient(linear, left top, right top, from(#eef2f3), to(#8e9eab));
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 400px;
+  height: 30vh;
 }
 
 #section-3 h1 {
@@ -212,7 +224,13 @@ main {
 
 /* SECTION 4*/
 .section-4 {
-  background: #5a9fb6;
+  background: #757F9A;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#D7DDE8), to(#757F9A));
+  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 50vh;
 }
 
 .section-4 h3 {
@@ -234,6 +252,23 @@ main {
   padding: 1rem;
 }
 
+.social-media {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.social-media i {
+  padding: 4px;
+  font-size: 32px;
+  color: black;
+}
+
+.social-media i:hover, .social-media i:active {
+  color: white;
+}
+
 /* FOOTER */
 footer {
   background: #4451c0;
@@ -243,13 +278,20 @@ footer {
 /*  MOBILE NAVIGATION  */
 /* Add a black background color to the top navigation */
 .topnav {
+  display: none;
   overflow: hidden;
+}
+
+@media (max-width: 820px) {
+  .topnav {
+    display: block;
+  }
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -258,7 +300,7 @@ footer {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  color: black;
+  color: #f2f2f2;
 }
 
 /* Add an active class to highlight the current page */
@@ -278,6 +320,36 @@ Hide the link that should open and close the topnav on small screens */
 @media (max-width: 820px) {
   .topnav .icon {
     display: block;
+  }
+}
+
+@-webkit-keyframes twist {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes twist {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
