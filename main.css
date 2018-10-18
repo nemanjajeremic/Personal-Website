@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: 'K2D';
+  font-family: "Lato", sans-serif;
   font-size: 18px;
 }
 
@@ -120,6 +120,8 @@ main {
 
 .section-1 p {
   color: lightgray;
+  -webkit-animation: moveInLeft 1s;
+          animation: moveInLeft 1s;
 }
 
 .section-1__title {
@@ -127,6 +129,8 @@ main {
   font-size: 3rem;
   font-weight: bold;
   color: #57eea1;
+  -webkit-animation: moveInRight 1s;
+          animation: moveInRight 1s;
 }
 
 /* SECTION 2*/
@@ -319,6 +323,9 @@ Hide the link that should open and close the topnav on small screens */
   }
 }
 
+/*------------------------------------*\
+  #ANIMATIONS
+\*------------------------------------*/
 @-webkit-keyframes twist {
   0% {
     -webkit-transform: rotateY(0deg);
@@ -333,7 +340,6 @@ Hide the link that should open and close the topnav on small screens */
             transform: rotateY(0deg);
   }
 }
-
 @keyframes twist {
   0% {
     -webkit-transform: rotateY(0deg);
@@ -346,6 +352,58 @@ Hide the link that should open and close the topnav on small screens */
   100% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=main.css.map */
