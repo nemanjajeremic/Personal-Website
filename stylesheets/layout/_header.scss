@@ -12,6 +12,7 @@
     align-items: center;
     flex-wrap: nowrap;
 
+
     &__logo {
         padding: 8px;
         border: 1px transparent solid;
@@ -20,8 +21,6 @@
         &:active {
             border: 1px black solid;
             border-radius: 10px;
-            background: black;
-            color: white;
         }
     }
 
@@ -30,7 +29,8 @@
 .main-nav {
     position: fixed;
     width: 100%;
-    background: lightblue;
+    background: $color-header-background;
+    z-index: 5;
 
     &__items {
         list-style: none;
@@ -47,8 +47,6 @@
 
         a {
             display: block;
-            text-decoration: none;
-            color: black;
             border: 1px transparent solid;
             padding: 8px;
 
@@ -56,8 +54,6 @@
             &:active {
                 border: 1px transparent solid;
                 border-radius: 10px;
-                color: white;
-                background: black;
             }
         }
     }

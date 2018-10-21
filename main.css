@@ -9,15 +9,14 @@
 }
 
 .introduction p {
-  color: lightgray;
   -webkit-animation: moveInLeft 1s;
           animation: moveInLeft 1s;
 }
 
 .introduction__container {
   height: calc(80vh - 57.6px);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.2)), to(rgba(40, 180, 133, 0.2))), url(images/keyboard_background.jpg);
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.2), rgba(40, 180, 133, 0.2)), url(images/keyboard_background.jpg);
+  background: -webkit-gradient(linear, left top, right bottom, from(#292C33), to(#393d47));
+  background: linear-gradient(to bottom right, #292C33, #393d47);
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -34,9 +33,6 @@
 
 .introduction__title {
   text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #57eea1;
   -webkit-animation: moveInRight 1s;
           animation: moveInRight 1s;
 }
@@ -49,15 +45,13 @@
 }
 
 .skills {
-  background: #f1f8fa;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
+  background: linear-gradient(to top right, #f6f6f7, #fefefe);
 }
 
-.skills h1 {
-  color: #25eb85;
-  font-size: 2rem;
-  margin: 0;
-  padding-top: 2rem;
+.skills h2 {
   text-align: center;
+  margin: 0;
 }
 
 .container__skill-box {
@@ -69,6 +63,10 @@
       flex-wrap: wrap;
   margin-left: 10%;
   margin-right: 10%;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
 }
 
 .skill-box {
@@ -95,13 +93,13 @@
   background: white;
   padding: 2.5rem;
   border: 1px solid #797979;
-}
-
-.skill-box:hover, .skill-box:active {
   -webkit-transition: -webkit-transform 1s ease-out;
   transition: -webkit-transform 1s ease-out;
   transition: transform 1s ease-out;
   transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.skill-box:hover, .skill-box:active {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
   /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -120,17 +118,26 @@
   margin-top: 1rem;
 }
 
+.skill-box:after {
+  width: 300px;
+  height: 200px;
+  top: 0;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
 /*------------------------------------*\
     #experience
 \*------------------------------------*/
 .experience {
   background: #8e9eab;
-  background: -webkit-gradient(linear, left top, right top, from(#eef2f3), to(#8e9eab));
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  background: #fff;
   height: 30vh;
 }
 
-.experience h1 {
+.experience h2 {
   text-align: center;
   margin: 0;
 }
@@ -140,12 +147,12 @@
 \*------------------------------------*/
 .contact-me {
   background: #757F9A;
-  background: -webkit-gradient(linear, left top, right top, from(#D7DDE8), to(#757F9A));
-  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
+  background: linear-gradient(to top right, #f6f6f7, #fefefe);
   height: 50vh;
 }
 
-.contact-me h3 {
+.contact-me h2 {
   text-align: center;
   margin: 0;
   padding: 1rem;
@@ -313,6 +320,55 @@ html {
   font-size: 18px;
 }
 
+.main-nav__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav__item a:hover, .main-nav__item a:active {
+  color: white;
+  background: black;
+}
+
+.introduction__title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #57eea1;
+}
+
+.introduction p {
+  color: whitesmoke;
+}
+
+.skills h2,
+.experience h2,
+.contact-me h2 {
+  color: #25eb85;
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+footer a:hover {
+  background: black;
+}
+
+.header__logo {
+  color: white;
+}
+
+.header__logo:hover, .header__logo:active {
+  background: black;
+  color: white;
+}
+
 /*------------------------------------*\
     #MOBILE NAVIGATION
 \*------------------------------------*/
@@ -382,14 +438,13 @@ html {
 .header__logo:hover, .header__logo:active {
   border: 1px black solid;
   border-radius: 10px;
-  background: black;
-  color: white;
 }
 
 .main-nav {
   position: fixed;
   width: 100%;
-  background: lightblue;
+  background: #1d1e25;
+  z-index: 5;
 }
 
 .main-nav__items {
@@ -410,8 +465,6 @@ html {
 
 .main-nav__item a {
   display: block;
-  text-decoration: none;
-  color: black;
   border: 1px transparent solid;
   padding: 8px;
 }
@@ -419,12 +472,20 @@ html {
 .main-nav__item a:hover, .main-nav__item a:active {
   border: 1px transparent solid;
   border-radius: 10px;
-  color: white;
-  background: black;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #4451c0;
   text-align: center;
+  height: 3em;
 }
 /*# sourceMappingURL=main.css.map */

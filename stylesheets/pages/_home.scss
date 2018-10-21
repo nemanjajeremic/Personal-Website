@@ -14,13 +14,13 @@
     margin-right: auto;
 
     p {
-        color: lightgray;
+        
         animation: moveInLeft 1s;
     }
 
     &__container {
         height: calc(80vh - 57.6px);
-        background-image: linear-gradient(to right bottom, rgba($color-gradient-1, 0.2), rgba($color-gradient-2, 0.2)), url(images/keyboard_background.jpg);
+        background: $color-section-1-background;
         background-position: center;
         background-size: cover;
         display: flex;
@@ -31,9 +31,6 @@
 
     &__title {
         text-align: center;
-        font-size: 3rem;
-        font-weight: bold;
-        color: #57eea1;
         animation: moveInRight 1s;
     }
 }
@@ -52,13 +49,9 @@
 
 .skills {  
     background: $color-section-2-background;
-    h1 {
-        color: #25eb85;
-        font-size: 2rem;
-        margin: 0;
-        padding-top: 2rem;
+    h2 {
         text-align: center;
-        
+        margin: 0;
     }
 }
 
@@ -68,6 +61,7 @@
     flex-wrap: wrap;
     margin-left: 10%;
     margin-right: 10%;
+    transition: transform 1s ease-out;
 }
 
 
@@ -84,11 +78,11 @@
     background: white;
     padding: 2.5rem;
     border: 1px solid rgb(121, 121, 121);
+    transition: transform 1s ease-out;
 
 
     &:hover,
     &:active {
-        transition: transform 1s ease-out;
         transform: rotateY(360deg);
         /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
 
@@ -106,6 +100,15 @@
         margin: 0;
         margin-top: 1rem;
     }
+
+    &:after {
+        width: 300px;
+        height: 200px;
+        top: 0;
+        content: "";
+        position: absolute;
+        z-index: -1;
+    }
 }
 
 /*------------------------------------*\
@@ -119,7 +122,7 @@
     background: $color-section-3-background;
     height: 30vh;
 
-    h1 {
+    h2 {
         text-align: center;
         margin: 0;
     }
@@ -136,7 +139,7 @@
 
     height: 50vh;
 
-    h3 {
+    h2 {
         text-align: center;
         margin: 0;
         padding: 1rem;

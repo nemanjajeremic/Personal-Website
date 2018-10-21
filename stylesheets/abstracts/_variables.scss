@@ -9,13 +9,27 @@
 $color-gradient-1: #7ed56f;
 $color-gradient-2: #28b485;
 
+//$color-header-background: linear-gradient(to right, #4ecdc4, #556270);
+$color-header-background: #1d1e25;
 
-//section 2 background
-$color-section-2-background: rgb(241, 248, 250);
-//section 3 background
-$color-section-3-background: linear-gradient(to right, #eef2f3, #8e9eab);
-//section 4 background
-$color-section-4-background: linear-gradient(to right, #D7DDE8, #757F9A);
+$color-header-font: white;
+
+$color-header-font-hover: white;
+$color-header-font-background-hover: black;
+
+
+
+
+
+$color-introduction-paragraph: whitesmoke;
+
+$color-section-1-background: linear-gradient(to bottom right,#292C33,#393d47); 
+$color-section-2-background: linear-gradient(to top right,#f6f6f7,#fefefe);
+$color-section-3-background: #fff;
+$color-section-4-background: linear-gradient(to top right,#f6f6f7,#fefefe);
+
+
+$color-footer-anchor: white;
 
 
 

@@ -2,8 +2,61 @@
  * Basic typography style for copy text
  */
 
- html {
+html {
     font-family: "Lato", sans-serif;
     font-size: 18px;
 }
- 
+
+.main-nav__item a {
+    text-decoration: none;
+    color: $color-header-font;
+
+    &:hover,
+    &:active {
+        color: $color-header-font;
+        background: $color-header-font-background-hover;
+    }
+}
+
+.introduction__title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #57eea1;
+}
+
+.introduction p {
+    color: $color-introduction-paragraph;
+}
+
+.skills h2,
+.experience h2,
+.contact-me h2 {
+    color: #25eb85;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-footer-anchor;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    &:hover {
+        background: black;
+
+    }
+}
+
+.header__logo {
+    color: white;
+
+    &:hover,
+    &:active {
+        background: black;
+        color: white;
+    }
+
+}
