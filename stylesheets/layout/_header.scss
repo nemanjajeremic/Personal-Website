@@ -1,3 +1,65 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+    height: 60px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__logo {
+        padding: 8px;
+        border: 1px transparent solid;
+
+        &:hover,
+        &:active {
+            border: 1px black solid;
+            border-radius: 10px;
+            background: black;
+            color: white;
+        }
+    }
+
+}
+
+.main-nav {
+    position: fixed;
+    width: 100%;
+    background: lightblue;
+
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: 820px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            border: 1px transparent solid;
+            padding: 8px;
+
+            &:hover,
+            &:active {
+                border: 1px transparent solid;
+                border-radius: 10px;
+                color: white;
+                background: black;
+            }
+        }
+    }
+
+}

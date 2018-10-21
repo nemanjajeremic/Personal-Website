@@ -24,7 +24,7 @@ html {
 /**
  * Basic styles for links
  */
-a {
+/* a {
   color: $brand-color;
   text-decoration: none;
 
@@ -32,4 +32,15 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
+} */
+
+
+
+body {
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    padding-top: 60px;
 }

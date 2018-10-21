@@ -1,3 +1,176 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+
+/*------------------------------------*\
+    #INTRODUCTION
+\*------------------------------------*/
+
+.introduction {
+    max-width: 650px;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        color: lightgray;
+        animation: moveInLeft 1s;
+    }
+
+    &__container {
+        height: calc(80vh - 57.6px);
+        background-image: linear-gradient(to right bottom, rgba($color-gradient-1, 0.2), rgba($color-gradient-2, 0.2)), url(images/keyboard_background.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        padding: 6rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #57eea1;
+        animation: moveInRight 1s;
+    }
+}
+
+
+/*------------------------------------*\
+    #skills
+\*------------------------------------*/
+
+
+.skills__container {
+    background-color: white;
+
+}
+
+
+.skills {  
+    background: $color-section-2-background;
+    h1 {
+        color: #25eb85;
+        font-size: 2rem;
+        margin: 0;
+        padding-top: 2rem;
+        text-align: center;
+        
+    }
+}
+
+.container__skill-box {
+    display: flex;
+    padding: 3rem;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.skill-box {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0.5rem;
+    width: 300px;
+    height: 200px;
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid rgb(121, 121, 121);
+
+
+    &:hover,
+    &:active {
+        transition: transform 1s ease-out;
+        transform: rotateY(360deg);
+        /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 1rem;
+    }
+}
+
+/*------------------------------------*\
+    #experience
+\*------------------------------------*/
+
+
+.experience {
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    background: $color-section-3-background;
+    height: 30vh;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/*------------------------------------*\
+    #contact-me
+\*------------------------------------*/
+
+.contact-me {
+    background: #757F9A;
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+    background: $color-section-4-background;
+
+    height: 50vh;
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+.form-container {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.social-media {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    i {
+        padding: 4px;
+        font-size: 32px;
+        color: black;
+
+        &:hover,
+        &:active {
+            color: white;
+        }
+    }
+}
