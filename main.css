@@ -100,8 +100,8 @@
 }
 
 .skill-box:hover, .skill-box:active {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
