@@ -14,7 +14,7 @@
     margin-right: auto;
 
     p {
-        
+
         animation: moveInLeft 1s;
     }
 
@@ -47,8 +47,9 @@
 }
 
 
-.skills {  
+.skills {
     background: $color-section-2-background;
+
     h2 {
         text-align: center;
         margin: 0;
@@ -59,35 +60,63 @@
     display: flex;
     padding: 3rem;
     flex-wrap: wrap;
-    margin-left: 10%;
-    margin-right: 10%;
+    max-width: 1400px;
+    margin: 0 auto;
     transition: transform 1s ease-out;
 }
 
 
 .skill-box {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    perspective: 1500px;
     border-radius: 15px;
-    margin: 0.5rem;
     width: 300px;
     height: 200px;
-    background: white;
-    padding: 2.5rem;
-    border: 1px solid rgb(121, 121, 121);
-    transition: transform 1s ease-out;
+    margin: 0.5rem;
+    
+    &__side {
+        background: #eee;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex: 1 1 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(121, 121, 121);
+        border-radius: 15px;
+        width: 300px;
+        height: 200px;
+        transition: all 1s;
+
+        i {
+            
+        }
+    }
+
+    &--front {
+        
+        flex-direction: column;
+        padding: 2.5rem;
+    }
 
 
-    &:hover,
-    &:active {
+    &--back {
+        background: #eee;
         transform: rotateY(180deg);
-        /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
 
     }
 
+    &:hover &--back {
+        transform: rotatey(0deg);
+    }
+
+    &:hover &--front {
+        transform: rotatey(-180deg);
+    }
+
+    
     img {
         height: 50px;
         width: 50px;

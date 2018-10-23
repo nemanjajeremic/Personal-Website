@@ -6,7 +6,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(68, 81, 192);
+    background: $color-footer-background;
     text-align: center;
     height: 3em;
 }
+
