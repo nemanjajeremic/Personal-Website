@@ -174,7 +174,6 @@
   background: #757F9A;
   background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
   background: linear-gradient(to top right, #f6f6f7, #fefefe);
-  height: 50vh;
 }
 
 .contact-me h2 {
@@ -194,6 +193,21 @@
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+}
+
+.form-container form label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.form-container form input {
+  padding: 10px;
+}
+
+.form-container form input:focus,
+.form-container form textarea:focus {
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .social-media {
